@@ -1,17 +1,25 @@
 # Docker for CUDA enabled OpenCV
 
-make sure you've already installed nvidia-docker2
+## Environment
+I leave my own environment below. 
+* OS:
+	* Linux(Ubuntu 20.04.2 LTS) 
+* GPU:
+	* NVIDIA® GeForce® GTX TITAN X
+* CPU:
+	* Intel® Core i9-7920X CPU @ 2.90GHz
+	* `$ nproc` outputs 24	
+* NVIDIA® Driver = 460.91.03
+* Docker = 20.10.7
+* [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker)(for GPU)
+
+
 <br>
 
 
+modify `dockerfiles/Dockerfile` depending on your environment(such as the desired OpenCV version, Compute Capability(CC) of your GPU).
 ```bash
-cd dockerfiles
-```
-<br>
-
-modify `dockerfiles/Dockerfile` depending on yout environment.
-```bash
-docker build -t $(whoami)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0 ./
+docker build -t $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0 ./dockerfiles/
 ```
 <br>
 
@@ -21,9 +29,9 @@ docker images | head
 ```
 <br>
 
-run container
+run container, -v option is for mounting your local dir `$HOME/coding`
 ```bash
-docker run --rm -it --runtime=nvidia -v $HOME/coding/:/opt $(whoami)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0
+docker run --rm -it --runtime=nvidia -v $HOME/coding/:/opt $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0
 ```
 <br>
 
@@ -32,7 +40,7 @@ cd lenna
 ```
 <br>
 
-build source code
+build sample source code
 ```bash
 ./run.sh
 ```
@@ -43,3 +51,4 @@ build source code
 ```
 <br>
 
+you can successfully see `Result.png` generated in `lenna`

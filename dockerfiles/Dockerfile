@@ -14,9 +14,9 @@ ENV DEBIAN_FRONTEND noninteractive
 ARG OPENCV_VERSION='3.4.11'
 # ARG OPENCV_VERSION='3.4.10'
 
-## check Compute Capability(CC) the url below
+## check Compute Capability(CC) with the url of the official cuda website below
 ## https://developer.nvidia.com/cuda-gpus
-## if you don't know your GPU name, check by $ nvidia-settings
+## if you don't know your GPU name, check by $ nvidia-settings or $ nvidia-smi
 ## GPU_ARCH should be the value lower than your GPU CC, otherwise it won't work when you use cuda enabled opencv.
 ## https://qiita.com/sonots/items/1c60ccb6ffec6d04b223
 
