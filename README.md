@@ -1,21 +1,5 @@
 # Docker for CUDA enabled OpenCV
 
-## Environment
-I leave my own environment below. 
-* OS:
-	* Linux(Ubuntu 20.04.2 LTS) 
-* GPU:
-	* NVIDIA® GeForce® GTX TITAN X
-* CPU:
-	* Intel® Core i9-7920X CPU @ 2.90GHz
-	* `$ nproc` outputs 24	
-* NVIDIA® Driver = 460.91.03
-* Docker = 20.10.7
-* [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker)(for GPU)
-
-
-<br>
-
 
 modify `dockerfiles/Dockerfile` depending on your environment(such as the desired OpenCV version, Compute Capability(CC) of your GPU).
 ```bash
@@ -52,3 +36,18 @@ build sample source code
 <br>
 
 you can successfully see `Result.png` generated in `lenna`
+
+## Environment
+I leave my own environment below. 
+* OS:
+	* Linux(Ubuntu 20.04.2 LTS) 
+* GPU:
+	* NVIDIA® GeForce® GTX TITAN X
+* CPU:
+	* Intel® Core i9-7920X CPU @ 2.90GHz
+	* `$ nproc` outputs 24	
+* NVIDIA® Driver = 460.91.03
+* Docker = 20.10.7
+* [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker)(for GPU)
+
+
