@@ -1,3 +1,0 @@
-/opt/docker_cuda_opencv/git4us/lenna/build/CMakeFiles/rebuild_cache.dir
-/opt/docker_cuda_opencv/git4us/lenna/build/CMakeFiles/main.dir
-/opt/docker_cuda_opencv/git4us/lenna/build/CMakeFiles/edit_cache.dir
