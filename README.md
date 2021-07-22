@@ -1,7 +1,8 @@
 # Docker for CUDA enabled OpenCV
 
 
-modify `dockerfiles/Dockerfile` depending on your environment(such as the desired OpenCV version, Compute Capability(CC) of your GPU).
+modify `dockerfiles/Dockerfile` depending on your environment
+(such as your desired OpenCV version, Compute Capability(CC) of your GPU).
 ```bash
 docker build -t $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0 ./dockerfiles/
 ```
@@ -64,7 +65,7 @@ run
 ./a.out
 ```
 
-you can successfully see `3.000000` generated in `hello_cuda`
+you can successfully see the output, `3.000000`
 <br>
 
 
