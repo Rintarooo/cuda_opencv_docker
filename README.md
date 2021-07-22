@@ -19,6 +19,8 @@ docker run --rm -it --runtime=nvidia -v $HOME/coding/:/opt $(id -un)/cuda:10.1-c
 ```
 <br>
 
+## CUDA enabled OpenCV
+
 ```bash
 cd lenna
 ```
@@ -36,6 +38,35 @@ build sample source code
 <br>
 
 you can successfully see `Result.png` generated in `lenna`
+<br>
+
+## CUDA
+check installed cuda version
+```bash
+nvcc -V
+```
+<br>
+
+
+```bash
+cd hello_cuda
+```
+<br>
+
+build [sample source code](https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/)
+```bash
+./nvcc vector_add.cu
+```
+<br>
+
+run
+```bash
+./a.out
+```
+
+you can successfully see `3.000000` generated in `hello_cuda`
+<br>
+
 
 ## Environment
 I leave my own environment below. 
