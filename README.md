@@ -14,7 +14,7 @@ docker images | head
 ```
 <br>
 
-run container, -v option is for mounting your local dir `$HOME/coding`
+run container, -v option is for mounting your local dir `$HOME/coding` into `/opt/`
 ```bash
 docker run --rm -it --runtime=nvidia -v $HOME/coding/:/opt $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0
 ```
