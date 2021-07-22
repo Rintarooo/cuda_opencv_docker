@@ -56,7 +56,7 @@ cd hello_cuda
 
 build [sample source code](https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/)
 ```bash
-./nvcc vector_add.cu
+nvcc vector_add.cu
 ```
 <br>
 
