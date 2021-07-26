@@ -58,6 +58,10 @@ build [sample source code](https://cuda-tutorial.readthedocs.io/en/latest/tutori
 ```bash
 nvcc vector_add.cu
 ```
+```bash
+nvcc hello.cu
+```
+
 <br>
 
 run
