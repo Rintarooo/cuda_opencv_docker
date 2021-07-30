@@ -60,9 +60,15 @@ nvcc vector_add.cu
 ```
 <br>
 
-if you want debug with `cuda-gdb`, 
+if you want to debug with `cuda-gdb`, 
 ```bash
 nvcc -G vector_add.cu
+```
+<br>
+
+or use CMake(you need to add `-G` option in `CMakeLists.txt` if you want to debug)
+```bash
+./run.sh && ./build/main
 ```
 <br>
 
