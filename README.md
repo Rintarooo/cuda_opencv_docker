@@ -58,11 +58,32 @@ build [sample source code](https://cuda-tutorial.readthedocs.io/en/latest/tutori
 ```bash
 nvcc vector_add.cu
 ```
-```bash
-nvcc hello.cu
-```
-
 <br>
+
+if you want debug with `cuda-gdb`, 
+```bash
+nvcc -G vector_add.cu
+```
+<br>
+
+run `cuda-gdb` 
+```bash
+cuda-gdb a.out
+```
+<br>
+
+set breakpoint at kernel function `vector_add`, which is kernel function name(not filename) 
+```bash
+(cuda-gdb) b vector_add
+```
+<br>
+
+start program
+```bash
+(cuda-gdb) r
+```
+<br>
+
 
 run
 ```bash

@@ -38,7 +38,9 @@ RUN apt update && \
     unzip \
     build-essential \
     curl \
-    vim
+    vim \
+    gdb
+    # nvidia-cuda-gdb
 
 # Media I/O:
 RUN sudo apt install -y \
