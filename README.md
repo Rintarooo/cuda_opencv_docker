@@ -8,6 +8,12 @@ docker build -t $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0 ./dock
 ```
 <br>
 
+add plus packages, modify `dockerfiles/add/Dockerfile` in advance
+```bash
+docker build -t $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0 ./dockerfiles/add/
+```
+<br>
+
 make sure you built successfully
 ```bash
 docker images | head
