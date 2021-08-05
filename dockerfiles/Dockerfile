@@ -39,7 +39,8 @@ RUN apt update && \
     build-essential \
     curl \
     vim \
-    gdb
+    gdb \
+    gnuplot
     # nvidia-cuda-gdb
 
 # Media I/O:
