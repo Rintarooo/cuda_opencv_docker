@@ -14,6 +14,12 @@ docker build -t $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0 ./dock
 ```
 <br>
 
+build docker image, pcl
+```bash
+docker build -t $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0-pcl1.11.0 ./dockerfiles/pcl/
+```
+<br>
+
 make sure you built successfully
 ```bash
 docker images | head
