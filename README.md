@@ -67,7 +67,7 @@ docker run --rm -it --runtime=nvidia -v $HOME/coding/:/opt -e DISPLAY=$DISPLAY -
 ```
 <br>
 
-You may need to run `xhost si:localuser:$USER` or worst case `xhost local:root` if get errors like Error: cannot open display
+If you cannot display images, you may need to run `xhost si:localuser:$USER` or worst case `xhost local:root` if get errors like Error: cannot open display
 <br>
 
 Ref: https://github.com/turlucode/ros-docker-gui
