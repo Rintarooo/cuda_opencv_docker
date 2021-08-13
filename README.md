@@ -54,6 +54,23 @@ you can successfully see `Result.png` generated in `lenna`
 <br>
 
 ## CUDA
+If you wanna display image in the container by `cv::imshow`, add the following command.
+```bash
+-e DISPLAY=$DISPLAY
+-v /tmp/.X11-unix:/tmp/.X11-unix
+```
+<br>
+
+command could be like
+```bash
+docker run --rm -it --runtime=nvidia -v $HOME/coding/:/opt -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0
+```
+<br>
+
+You may need to run `xhost si:localuser:$USER` or worst case `xhost local:root` if get errors like Error: cannot open display
+Ref: https://github.com/turlucode/ros-docker-gui
+
+## CUDA
 check installed cuda version
 ```bash
 nvcc -V
