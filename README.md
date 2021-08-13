@@ -53,7 +53,7 @@ build sample source code
 you can successfully see `Result.png` generated in `lenna`
 <br>
 
-## CUDA
+### GUI in container
 If you wanna display image in the container by `cv::imshow`, add the following command.
 ```bash
 -e DISPLAY=$DISPLAY
@@ -68,6 +68,8 @@ docker run --rm -it --runtime=nvidia -v $HOME/coding/:/opt -e DISPLAY=$DISPLAY -
 <br>
 
 You may need to run `xhost si:localuser:$USER` or worst case `xhost local:root` if get errors like Error: cannot open display
+<br>
+
 Ref: https://github.com/turlucode/ros-docker-gui
 
 ## CUDA
