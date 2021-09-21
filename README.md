@@ -20,6 +20,12 @@ docker build -t $(id -un)/cuda:10.1-cudnn7-ubuntu18.04-opencv3.4.11-CC5.0-pcl1.1
 ```
 <br>
 
+build docker image, OpenGL + CUDA
+```bash
+docker build -t $(id -un)/cudagl:10.1-ubuntu18.04-opencv3.4.11-CC5.0-pcl1.11.0 ./dockerfiles/cudagl/
+```
+<br>
+
 make sure you built successfully
 ```bash
 docker images | head
