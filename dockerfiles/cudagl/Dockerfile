@@ -39,6 +39,7 @@ RUN apt update && \
     gnuplot \
     nvidia-cuda-gdb
 
+
 # Media I/O:
 RUN sudo apt install -y \
     zlib1g-dev \
@@ -49,6 +50,11 @@ RUN sudo apt install -y \
     libopenexr-dev \
     libgdal-dev \
     libgtk2.0-dev
+
+# https://grainrigi.hatenablog.com/entry/2017/08/27/144218
+RUN sudo apt install -y \
+    libglew-dev \
+    libglfw3-dev
 
 # Video I/O:
 RUN sudo apt install -y \
